@@ -6,7 +6,7 @@ authentication system, on demand current event updates and a personal calendar f
 Available at: https://play.google.com/store/apps/details?id=com.GreyMatters.GreyMattersApp
 
 ## Repository Information
-This repository is not used as a [] and is intended as a showcase only. There are several key files removed, particularly those pertaining to database connections and security information. The files here are divided into 3 key directories:
+This repository is not used as a backup and is intended as a showcase only. There are several key files removed, particularly those pertaining to database connections and security information. The files here are divided into 3 key directories:
 
 1. The src directory contains all kotlin and java files.
 2. The layout directory contains all of the xml files.
