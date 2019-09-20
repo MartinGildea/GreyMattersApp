@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EEE">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#EEE">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/changeName"
+                android:background="#FFF"
+                android:layout_width="0dp"
+                android:layout_height="121dp"
+                android:clickable="true" android:focusable="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.0"
+                android:layout_marginTop="16dp" app:layout_constraintTop_toBottomOf="@+id/textView">
+            <TextView
+                    android:id="@+id/manageAccountCurrentName"
+                    android:text="@string/default_name"
+                    android:textSize="16sp"
+                    android:textColor="#333"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="8dp" app:layout_constraintBottom_toTopOf="@+id/guideline3"/>
+            <TextView
+                    android:text="@string/update_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView11"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="8dp" android:layout_marginTop="2dp"
+                    app:layout_constraintTop_toTopOf="@+id/guideline3"/>
+            <androidx.constraintlayout.widget.Guideline
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" app:layout_constraintGuide_begin="62dp"
+                    android:id="@+id/guideline3" app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="10dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/changeEmail"
+                android:background="#FFF"
+                android:layout_width="0dp"
+                android:layout_height="121dp"
+                android:clickable="true" android:focusable="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintTop_toBottomOf="@+id/changeName" android:layout_marginTop="8dp">
+            <TextView
+                    android:id="@+id/manageAccountCurrentEmail"
+                    android:text="@string/default_email"
+                    android:textSize="16sp"
+                    android:textColor="#333"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="8dp" android:layout_marginBottom="2dp"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline4"/>
+            <TextView
+                    android:text="@string/update_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="16dp"
+                    android:id="@+id/textView9"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="8dp" android:layout_marginTop="2dp"
+                    app:layout_constraintTop_toTopOf="@+id/guideline4"/>
+            <androidx.constraintlayout.widget.Guideline
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" app:layout_constraintGuide_begin="59dp"
+                    android:id="@+id/guideline4" app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="8dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/changePassword"
+                android:background="#FFF"
+                android:layout_width="0dp"
+                android:layout_height="121dp"
+                android:clickable="true" android:focusable="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintTop_toBottomOf="@+id/changeEmail" android:layout_marginTop="8dp">
+            <TextView
+                    android:text="@string/update_password"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView12" android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="8dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/privacyPolicy"
+                android:background="#FFF"
+                android:layout_width="0dp"
+                android:layout_height="121dp"
+                android:layout_marginEnd="0dp"
+                android:clickable="true" android:focusable="true"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="0dp"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.0"
+                android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/changePassword">
+            <TextView
+                    android:text="@string/see_privacy_policy"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/see_privacy_policy" android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="8dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+                android:text="Sorry! Account management is not fully implemented at this point in time. It will be in the next update! Please contact us at: GreyMattersActiveAgeing@gmail.com or contact us in person in office or at any event to change any of these details or delete your account.\n\n You can still view the privacy policy by pressing the button at the bottom of this page."
+                android:textSize="14sp"
+                android:textColor="#3d3d3d"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView" app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp" android:layout_marginTop="16dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

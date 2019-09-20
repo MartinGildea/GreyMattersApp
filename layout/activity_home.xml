@@ -7,63 +7,9 @@
         android:layout_height="match_parent"
         android:fitsSystemWindows="true"
         tools:context=".Home">
-    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="match_parent">
-        <Button
-                android:text="@string/Recent_News"
-                android:layout_width="0dp"
-                android:layout_height="200dp"
-                android:id="@+id/homeGoToNews"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/guideline"
-                android:layout_marginRight="2dp" android:layout_marginEnd="2dp" app:layout_constraintHorizontal_bias="1.0"/>
-        <Button
-                android:text="@string/Personal_Calendar"
-                android:layout_width="0dp"
-                android:layout_height="200dp"
-                android:id="@+id/homeGoToPersonalCalendar"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/homeGoToEvents"
-                app:layout_constraintEnd_toStartOf="@+id/guideline"
-                android:layout_marginLeft="2dp" android:layout_marginStart="2dp"/>
-        <Button
-                android:text="@string/Manage_Account"
-                android:layout_width="0dp"
-                android:layout_height="200dp"
-                android:id="@+id/button6"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/guideline"
-                android:layout_marginLeft="2dp" android:layout_marginStart="2dp"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintTop_toBottomOf="@+id/homeGoToPersonalCalendar"/>
-        <Button
-                android:text="@string/Volunteer"
-                android:layout_width="0dp"
-                android:layout_height="200dp"
-                android:id="@+id/button7"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginEnd="2dp" android:layout_marginRight="2dp"
-                app:layout_constraintStart_toStartOf="@+id/guideline"
-                app:layout_constraintTop_toBottomOf="@+id/homeGoToContactUs"/>
-        <Button
-                android:text="@string/Contact_Organisers"
-                android:layout_width="0dp"
-                android:layout_height="200dp"
-                android:id="@+id/homeGoToContactUs"
-                app:layout_constraintTop_toBottomOf="@+id/homeGoToNews"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/guideline"
-                android:layout_marginRight="2dp" android:layout_marginEnd="2dp"
-                app:layout_constraintHorizontal_bias="1.0"/>
-        <Button
-                android:text="@string/EventList"
-                android:layout_width="0dp"
-                android:layout_height="200dp"
-                android:id="@+id/homeGoToEvents"
-                app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/guideline"
-                android:layout_marginLeft="2dp"
-                android:layout_marginStart="2dp" app:layout_constraintHorizontal_bias="0.0"/>
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+
+        <!--Center Guideline-->
         <androidx.constraintlayout.widget.Guideline
                 android:orientation="vertical"
                 android:layout_width="wrap_content"
@@ -71,5 +17,219 @@
                 android:id="@+id/guideline"
                 app:layout_constraintGuide_percent="0.5"
         />
+
+        <!--Events Button-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/homeGoToEvents"
+                android:layout_width="0dp"
+                android:layout_height="190dp"
+                android:background="#DD9999"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/guideline"
+                android:layout_marginStart="5dp" app:layout_constraintHorizontal_bias="0.0"
+                android:layout_marginTop="5dp" android:layout_marginEnd="5dp">
+
+            <ImageView
+                    android:id="@+id/eventsButtonLogo"
+                    android:layout_width="match_parent" android:layout_height="0dp"
+                    app:srcCompat="@drawable/events"
+                    app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/eventsButtonText"
+            />
+            <TextView
+                    android:id="@+id/eventsButtonText"
+                    android:background="#BB7777"
+                    android:textSize="18sp"
+                    android:textColor="#FFF"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="45sp"
+                    android:text="@string/EventList"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <!-- News Button -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/homeGoToNews"
+                android:layout_width="0dp"
+                android:layout_height="190dp"
+                android:background="#DD336699"
+                android:clickable="true" android:focusable="true"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                android:layout_marginEnd="5dp" app:layout_constraintHorizontal_bias="1.0"
+                android:layout_marginTop="5dp" android:layout_marginStart="5dp">
+            <ImageView
+                    android:id="@+id/newsLogo"
+                    android:layout_width="match_parent" android:layout_height="0dp"
+                    app:srcCompat="@drawable/news"
+                    app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintBottom_toTopOf="@id/newsText"
+                    android:layout_marginTop="20dp" android:layout_marginBottom="15dp" android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"/>
+            <TextView
+                    android:background="#336699"
+                    android:id="@+id/newsText"
+                    android:textSize="18sp"
+                    android:textColor="#FFF"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="45sp"
+                    android:text="@string/Recent_News"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <!-- Volunteering Button -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/homeGoToVolunteering"
+                android:layout_width="0dp"
+                android:layout_height="190dp"
+                android:background="#DD66BBCC"
+                android:clickable="true" android:focusable="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/homeGoToEvents"
+                app:layout_constraintEnd_toStartOf="@+id/guideline"
+                android:layout_marginEnd="5dp" app:layout_constraintHorizontal_bias="1.0"
+                android:layout_marginTop="5dp" android:layout_marginStart="5dp">
+            <ImageView
+                    android:id="@+id/volunteeringButtonIcon"
+                    android:layout_width="match_parent" android:layout_height="0dp"
+                    app:srcCompat="@drawable/volunteering"
+                    app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintBottom_toTopOf="@id/volunteeringButtonText"
+            />
+            <TextView
+                    android:id="@+id/volunteeringButtonText"
+                    android:text="@string/Volunteer"
+                    android:background="#55AABB"
+                    android:textSize="18sp"
+                    android:textColor="#FFF"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Contact Organisers Button -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/homeGoToContactUs"
+                android:layout_width="0dp"
+                android:layout_height="190dp"
+                android:background="#DDCCBB66"
+                android:clickable="true" android:focusable="true"
+                app:layout_constraintTop_toBottomOf="@+id/homeGoToNews"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                android:layout_marginEnd="5dp" app:layout_constraintHorizontal_bias="1.0"
+                android:layout_marginTop="5dp" android:layout_marginStart="5dp">
+            <ImageView
+                    android:id="@+id/contactButtonIcon"
+                    android:layout_width="match_parent" android:layout_height="0dp"
+                    app:srcCompat="@drawable/contact_us"
+                    app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintBottom_toTopOf="@id/contactButtonText"
+                    android:layout_marginTop="20dp" android:layout_marginBottom="20dp"/>
+            <TextView
+                    android:id="@+id/contactButtonText"
+                    android:text="@string/Contact_Organisers"
+                    android:background="#BBAA55"
+                    android:textSize="18sp"
+                    android:textColor="#FFF"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <!-- Manage Account Button -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/homeGoToAccount"
+                android:layout_width="0dp"
+                android:layout_height="190dp"
+                android:background="#cc77bb"
+                android:clickable="true" android:focusable="true"
+                app:layout_constraintTop_toBottomOf="@+id/homeGoToVolunteering"
+                app:layout_constraintEnd_toStartOf="@+id/guideline"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginEnd="5dp" app:layout_constraintHorizontal_bias="1.0"
+                android:layout_marginTop="5dp" android:layout_marginStart="5dp">
+            <ImageView
+                    android:id="@+id/manageAccountIcon"
+                    android:layout_width="match_parent" android:layout_height="0dp"
+                    app:srcCompat="@drawable/manageaccount"
+                    app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintBottom_toTopOf="@id/manageAccountText"
+                    android:layout_marginTop="20dp" android:layout_marginStart="5dp" android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="20dp"/>
+            <TextView
+                    android:id="@+id/manageAccountText"
+                    android:text="@string/Manage_Account"
+                    android:background="#aa3399"
+                    android:textSize="18sp"
+                    android:textColor="#FFF"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="45sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Personal Calendar Button -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/homeGoToPersonalCalendar"
+                android:layout_width="0dp"
+                android:layout_height="190dp"
+                android:background="#DF3A8A84"
+                android:clickable="true" android:focusable="true"
+                app:layout_constraintTop_toBottomOf="@+id/homeGoToContactUs"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                android:layout_marginEnd="5dp" app:layout_constraintHorizontal_bias="1.0"
+                android:layout_marginTop="5dp" android:layout_marginStart="5dp">
+            <ImageView
+                    android:id="@+id/calendarButtonIcon"
+                    android:layout_width="match_parent" android:layout_height="0dp"
+                    app:srcCompat="@drawable/calendar"
+                    app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintBottom_toTopOf="@id/calendarButtonText"
+                    android:layout_marginTop="15dp" android:layout_marginBottom="5dp" android:layout_marginEnd="5dp"
+                    android:layout_marginStart="5dp"/>
+            <TextView
+                    android:id="@+id/calendarButtonText"
+                    android:text="@string/Personal_Calendar"
+                    android:background="#3A8A84"
+                    android:textSize="18sp"
+                    android:textColor="#FFF"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="45sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            />
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
